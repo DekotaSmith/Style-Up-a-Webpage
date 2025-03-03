@@ -1,1 +1,158 @@
 
+/* Body Class: Subtle background color */
+.body-class {
+    background-color: #f4f4f4; /* Light gray background */
+    font-family: Arial, sans-serif; /* Clear and readable font */
+    font-size: 16px; /* Adequate text size */
+    color: #333; /* Text color for good contrast */
+    line-height: 1.6;
+}
+
+/* Header Class: Contrasting background and font color */
+.header-class {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text for visibility */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation Class: Different background color and active link styling */
+.nav-class {
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text */
+    padding: 10px;
+    text-align: center;
+}
+
+.nav-class a {
+    color: #fff; /* White text for links */
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.nav-class a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.nav-class a.active {
+    font-weight: bold; /* Bold text for active link */
+}
+
+/* Title Class & Section Title Class: Distinct heading colors */
+.title-class, .section-title-class {
+    color: #2c3e50; /* Dark blue-gray color for headings */
+    font-size: 2em; /* Larger font size for emphasis */
+    margin-bottom: 15px;
+}
+
+/* Text Class: Font color contrast with the background */
+.text-class {
+    color: #333; /* Dark gray color for good readability */
+}
+
+/* Image Class: Border around images */
+.image-class {
+    border: 5px solid #ccc; /* Light gray border */
+    padding: 5px;
+    border-radius: 8px; /* Rounded corners */
+    display: block;
+    max-width: 100%;
+    height: auto; /* Makes the image scalable */
+}
+
+/* Form Class and Button Class: Cohesive styling for form and buttons */
+.form-class input, .form-class select, .form-class textarea {
+    background-color: #fff; /* White background for form fields */
+    color: #333; /* Text color for good readability */
+    border: 1px solid #ccc; /* Light border */
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.button-class {
+    background-color: #007bff; /* Blue background for button */
+    color: #fff; /* White text */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-class:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Footer Class: Distinct background and font color */
+.footer-class {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Accessibility Considerations */
+
+/* Sufficient color contrast */
+body {
+    background-color: #f4f4f4;
+    color: #333; /* Ensure text is readable against background */
+}
+
+/* Ensure adequate font sizes for readability */
+h1, h2, h3, .text-class {
+    font-size: 1.2em; /* Slightly larger text for better readability */
+}
+
+/* Make images accessible by adding alt text (this is done in HTML, not CSS, so ensure images have alt attributes) */
+
+/* Responsive Design - Media Queries for different screen sizes */
+@media screen and (max-width: 768px) {
+    /* Adjust header and navigation for smaller screens */
+    .header-class {
+        padding: 15px;
+    }
+
+    .nav-class {
+        font-size: 14px; /* Smaller font size for navigation */
+        padding: 8px;
+    }
+
+    .title-class, .section-title-class {
+        font-size: 1.5em; /* Smaller font size for headings */
+    }
+
+    .image-class {
+        width: 100%; /* Make images responsive to screen width */
+    }
+
+    .form-class input, .form-class select, .form-class textarea {
+        width: 100%; /* Form elements take full width on smaller screens */
+    }
+
+    .footer-class {
+        position: static; /* Footer will not be fixed on small screens */
+        padding: 15px;
+    }
+}
+
+/* Additional styles to avoid auto-play and animation issues */
+video, audio {
+    autoplay: false; /* Avoid auto-play */
+    controls: true; /* Provide controls for users */
+}
+
+@keyframes none {
+    0% { }
+    100% { }
+}
+
+/* Avoid auto-play and animations */
+* {
+    animation: none !important; 
+    transition: none !important; 
+}
